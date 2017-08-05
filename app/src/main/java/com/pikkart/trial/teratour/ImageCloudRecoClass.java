@@ -26,6 +26,7 @@ import com.pikkart.ar.recognition.RecognitionOptions;
 import com.pikkart.ar.recognition.data.CloudRecognitionInfo;
 import com.pikkart.ar.recognition.items.Marker;
 
+
 import java.io.IOException;
 
 /**
@@ -72,11 +73,8 @@ public class ImageCloudRecoClass extends AppCompatActivity implements IRecogniti
 
     }
 
+    private void doRecognition(){
 
-
-
-    private void doRecognition()
-    {
         RecognitionFragment _cameraFragment = ((RecognitionFragment) getFragmentManager().findFragmentById(R.id.pikkart_ar_fragment));
         _cameraFragment.startRecognition(
                 new RecognitionOptions(
