@@ -9,6 +9,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -61,7 +62,18 @@ public class ImageCloudRecoClass extends AppCompatActivity implements IRecogniti
                 ),
                 this);
 
+        showMarkerDetails("Govt. House Enugu Ind. Layout. Enugu");
     }
+
+    private void showMarkerDetails(String Title) {
+        FragmentManager fm = getSupportFragmentManager();
+        MarkerDetailsDialogFragment markerDetailsDialogFragment = MarkerDetailsDialogFragment.newInstance(Title);
+        markerDetailsDialogFragment.show(fm, "fragment_edit_name");
+
+    }
+
+
+
 
     private void doRecognition()
     {
